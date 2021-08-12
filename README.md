@@ -9,7 +9,7 @@ Here is a simple view using the __requests__ Python library which can be install
    pip install requests
 ```
 
-## *views.py*
+### views.py
 
 ```
    from django.shortcuts import render
@@ -27,7 +27,7 @@ Here is a simple view using the __requests__ Python library which can be install
 	return render(request, 'app/home.html', {'city': city})
 ```
 
-## *urls.py*
+### urls.py
 
 ```
    from django.urls import path
@@ -38,7 +38,7 @@ Here is a simple view using the __requests__ Python library which can be install
    ]
 ```
 
-## *home.html*
+### home.html
 
 ```
    {% extends 'app/base.html' %}
@@ -67,7 +67,7 @@ Here is a simple view using the __requests__ Python library which can be install
 
 As the result we get:
 
-![alt text](~/Pictures/weather.png "weather app")
+![weather app picture](weather.png)
 
 
 
