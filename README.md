@@ -1,7 +1,7 @@
 # Simple Weather RESTful API Project
 ____
 
-This app uses data from the ```api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}``` endpoint to get info about weather description and temperature in the desired city.
+This app uses data from the ```https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}``` endpoint to get info about weather description and temperature in the desired city.
 
 Here is a simple view using the __requests__ Python library which can be installed using pip:
 
