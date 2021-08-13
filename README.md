@@ -55,7 +55,6 @@ Here is a simple view using the __requests__ Python library which can be install
 		</div>
 	</form>
 	{% if city %}
-
 		<p>Weather in <strong>{{ city.name }}</strong> for now:</p>
 		<img src="https://api.openweathermap.org/img/w/{{ city.weather.0.icon }}.png" class="rounded-2 border border-secondary border-2">
 		<p>Description: <strong>{{ city.weather.0.description }}</strong></p>
