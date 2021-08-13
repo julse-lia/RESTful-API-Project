@@ -1,7 +1,7 @@
 # Simple Weather RESTful API Project
 ____
 
-This app uses data from the ```api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}``` endpoint to get info about weather description and temperature in the desired city.
+This app uses data from the ```https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}``` endpoint to get info about weather description and temperature in the desired city.
 
 Here is a simple view using the __requests__ Python library which can be installed using pip:
 
@@ -9,7 +9,7 @@ Here is a simple view using the __requests__ Python library which can be install
    pip install requests
 ```
 
-## *views.py*
+### views.py
 
 ```
    from django.shortcuts import render
@@ -27,7 +27,7 @@ Here is a simple view using the __requests__ Python library which can be install
 	return render(request, 'app/home.html', {'city': city})
 ```
 
-## *urls.py*
+### urls.py
 
 ```
    from django.urls import path
@@ -38,7 +38,7 @@ Here is a simple view using the __requests__ Python library which can be install
    ]
 ```
 
-## *home.html*
+### home.html
 
 ```
    {% extends 'app/base.html' %}
@@ -47,19 +47,19 @@ Here is a simple view using the __requests__ Python library which can be install
 	<form method="get">
 		<div class="row align-items-center">
 			<div class="col align-self-start">
-				<input class="form-control-md" type="text" name="city_name" style="font-size: 20px;">
+				<input class="form-control-md" id="inp" type="text" name="city_name">
 			</div>
-			<div class="col align-self-end" style="margin-bottom: 30px;">
-				<button class="btn btn-primary btn-sm" type="submit" value="Submit" style="font-size: 18px;">Submit</button>
+			<div class="col align-self-end">
+				<button class="btn btn-primary btn-sm" id = "but" type="submit" value="Submit">Submit</button>
 			</div>
 		</div>
 	</form>
 	{% if city %}
 
-		<p style="font-size: 20px; margin-bottom: 30px;">Weather in <strong>{{ city.name }}</strong> for now:</p>
-		<img src="https://api.openweathermap.org/img/w/{{ city.weather.0.icon }}.png" class="rounded-2 border border-secondary border-2" style="height: 75px; width: 75px; margin-bottom: 30px;">
-		<p style="font-size: 20px; margin-bottom: 30px;">Description: <strong>{{ city.weather.0.description }}</strong></p>
-		<p style="font-size: 20px; margin-bottom: 30px;">Temperature in Kelvin: <strong>{{ city.main.temp }}</strong></p>
+		<p>Weather in <strong>{{ city.name }}</strong> for now:</p>
+		<img src="https://api.openweathermap.org/img/w/{{ city.weather.0.icon }}.png" class="rounded-2 border border-secondary border-2">
+		<p>Description: <strong>{{ city.weather.0.description }}</strong></p>
+		<p>Temperature in Kelvin: <strong>{{ city.main.temp }}</strong></p>
 	{% endif %}
 
    {% endblock %}
@@ -67,7 +67,4 @@ Here is a simple view using the __requests__ Python library which can be install
 
 As the result we get:
 
-![alt text](~/Pictures/weather.png "weather app")
-
-
-
+![weather app picture](weather.png)
