@@ -20,7 +20,7 @@ Application should provide:
 * Application displays home page.
 
 ![Home](./srs_images/home.png)
-<figcaption><b>Pic. 1.1 View the Home page.</b></figcaption>
+<figcaption>Pic. 1.1 View the Home page.</figcaption>
 
 
 
