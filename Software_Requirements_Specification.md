@@ -21,7 +21,8 @@ Application should provide:
 
 ![Home](./srs_images/home.png)
 
-Pic. 1.1 View the Home page.
+{:.image-caption}
+*Pic. 1.1 View the Home page.*
 
 
 
