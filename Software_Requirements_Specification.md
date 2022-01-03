@@ -14,6 +14,8 @@ Application should provide:
 
 ### 1. Home page
 
+#### View
+
 ***Main scenario:***
 
 * User selects “Home” menu item;
