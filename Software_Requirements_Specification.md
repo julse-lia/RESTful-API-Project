@@ -12,7 +12,7 @@ Application should provide:
 * Filtering by a certain date for employees;
 * Filtering by the period between dates for employees;
 
-## 1. Home page
+### 1. Home page
 
 ***Main scenario:***
 
